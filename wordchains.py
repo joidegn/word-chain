@@ -2,7 +2,7 @@
 
 """
 Author: Johannes Degn <j@degn.de>
- This script uses the recursive function permutation in order to find the end value
+ This script uses the recursive function mutation in order to find the end value
  starting with a start value
 """
 
