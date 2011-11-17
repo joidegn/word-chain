@@ -32,7 +32,7 @@ def main():
     counter = 0
     for word in dictionary:
       counter += 1
-      sys.stdout.write('%.2f\r% done' % (counter/entries*100))
+      sys.stdout.write('%.2f%% done\r' % (counter/entries*100))
       hash_map[word] = getmutations(word, hashing = True)
   while True:
     print('waiting for input...')
@@ -104,7 +104,7 @@ def letterdeleted(word1, word2):
   if len(word2) > len(word1):
     word2, word1 = word1, word2
   for pos,letter in enumerate(word1):
-    temp = ''.join([word1[:pos], word1[pos+1:]])
+    temp = ''.join([word1[:pos], word1[pos+1:]]) # join is faster than concatenate and we check for deleted letters a lot
     if temp == word2:
       return True
   return False
