@@ -57,7 +57,6 @@ def main():
       else:
         print ('NO')
         print ('%s and %s are not connected' % (start, end))
-print(repr(result))
 
 def wordchain(startvalue, endvalue, checked = []):
   #print (startvalue, endvalue, checked)
