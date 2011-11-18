@@ -59,7 +59,6 @@ def main():
         print ('%s and %s are not connected' % (start, end))
 
 def wordchain(startvalue, endvalue, checked = []):
-  #print (startvalue, endvalue, checked)
   mutations = getmutations(startvalue)
   checked.append(startvalue)
   if ismutation(startvalue, endvalue) or endvalue in mutations:  # we found the endvalue
@@ -72,7 +71,8 @@ def wordchain(startvalue, endvalue, checked = []):
 
 def getmutations(word, hashing = False):  # checks dictionary for permutations of word
   if (not hashing) and options['create_hash']:
-    return hash_map[word]
+    if word in hash_map.keys():
+      return hash_map[word]
   
   mutations = set()
   for dict_word in dictionary:
