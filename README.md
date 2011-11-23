@@ -5,7 +5,7 @@ expects pairs of words as input and finds out if these are connected by a word c
 see here: http://socialcam.com/jobs/problems
 
 ##install
-word chain is a shell script so place it in $PATH and then just run it from the command line.
+word chain is a python shell script so place it in $PATH and then just run it from the command line.
 
 usage:
 wordchain.py -h
